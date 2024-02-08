@@ -31,11 +31,11 @@ jobs:
     - name: Checkout Device Tree
       uses: actions/checkout@v4.1.1
       with:
-        path: fox_12.1/device/oplus/nicky
+        path: fox_12.1/device/realme/RMX1901
     
     - name: Install Android SDK
       run: |
-        cp fox_12.1/device/oplus/nicky/.github/patch/SDK.patch scripts
+        cp fox_12.1/device/realme/RMX1901/.github/patch/SDK.patch scripts
         cd scripts
         git apply ./SDK.patch
         sudo bash setup/install_android_sdk.sh
@@ -44,7 +44,7 @@ jobs:
       run: |
         cd fox_12.1
         source build/envsetup.sh || true
-        lunch twrp_nicky-eng
+        lunch twrp_RMX1901-eng
         mka adbd recoveryimage -j2
 
     - name: Upload recovery
