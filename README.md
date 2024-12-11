@@ -12,7 +12,7 @@ Works:
 First checkout manifest :
 
 ```
-repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
+repo init --depth=1 -u https://github.com/PitchBlackRecoveryProject/manifest_pb -b android-12.1
 repo sync -c
 ```
 
@@ -23,8 +23,8 @@ Finally execute these:
 
 ```
 . build/envsetup.sh
-lunch twrp_RMX1901-eng
-mka recoveryimage
+lunch pb_RMX1901-eng
+mka pbrp
 ```
 
 To test it:
